@@ -15,7 +15,8 @@ body {
     color:white;
 }
 
-.location, .temperature {
+.location, 
+.temperature {
     height: 30vh;
     width: 50%;
     display: flex;
@@ -27,7 +28,12 @@ body {
     flex-direction: column;
 }
 
-.temperature-degree span {
+.degree-section {
     font-size: 12px;
-    vertical-align: top;
+    display: flex;
+    align-items: center;
+}
+
+.degree-section span {
+    margin: 5px;
 }
