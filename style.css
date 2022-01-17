@@ -1,35 +1,75 @@
 * {
+    
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+html,
+    body {
+      min-height: 100%;
+    }
+body {
+  
+    background: linear-gradient(rgb(47,150,163), rgb(48,68,143));
+    font-family: 'Fjalla One', sans-serif;
+    color: black;
+    
 }
 
-body {
-    height: 100vh;
+.top {
+    border: 4px solid orange;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    padding-bottom: 2% ;;
+}
+
+.navbar {
+    box-sizing: border-box;
+    box-shadow: 8px 8px lightslategray;
+    width: 60%;
+    height: 5vh;
+    font-size: larger;
+    font-family: 'Fjalla One', sans-serif;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    background: linear-gradient(rgb(47,150,163), rgb(48,62,143));
-    font-family: sans-serif;
-    color:white;
+    background-color:lightgrey;
+    margin: auto;
+    border-radius: 8px;
 }
 
-.location, 
-.temperature {
-    height: 30vh;
-    width: 50%;
+.location {
+    box-sizing: border-box;
+    box-shadow: 8px 8px lightslategray;
+    width: 40%;
+    height: 58%;
+    font-size:smaller;
+    font-family: 'Fjalla One', sans-serif;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    border-radius: 1vh;
+    background-color:lightgrey;
+    margin: auto;
 }
 
-.temperature {
+.temperature {  
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow:15px 15px lightslategray;
+    width: 80%;
+    margin:auto;
+    font-size:larger;
+    font-family: 'Fjalla One', sans-serif;
+    border-radius: 1vh;
+    background-color:lightgrey;
 }
 
 .degree-section {
-    font-size: 12px;
+    font-size: 3vh;
     display: flex;
     align-items: center;
 }
@@ -37,3 +77,50 @@ body {
 .degree-section span {
     margin: 5px;
 }
+
+.sunrise, .sunset {
+    box-sizing: border-box;
+    box-shadow:10px 10px lightslategray;
+    width: 25%;
+    font-size: larger;
+    font-family: 'Fjalla One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vh;
+    background-color:lightgrey;
+    margin: 2vh;
+}
+
+.parentDiv {
+    display: flex;
+}
+
+.left-box {
+    flex:1;
+    margin: 2%;
+    border: 2px solid red;
+    vertical-align:middle;
+    height: auto;
+}
+
+.right-box {
+    flex: 1;
+    margin: 2%;
+    border: 5px solid purple;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    vertical-align:middle;
+    height: auto;
+}
+
+.sunTime {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    vertical-align:middle;
+    height: auto;
+}
+

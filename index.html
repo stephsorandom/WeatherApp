@@ -4,23 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='/style.css'>
 
-<link rel='stylesheet' href='/style.css'>
+    <div class='top'>
+        <nav class='navbar'><p>WeatherApp</p></nav>
+    </div>
 </head>
+
 <body>
-    <div class="location">
-        <h1 class='location-timezone'>Timezone</h1>
-        <canvas class='icon' width="128" height="128"></canvas>
-    </div>
-    <div class="temperature">
-        <div class='degree-section'>
-            <h2 class="temperature-degree">78</h2>
-            <span>F</span>
+    <div class='parentDiv'>
+        <div class='left-box'>
+            <div class="location">
+                <p>Timezone:</p> 
+                <h1 class='location-timezone'>Timezone</h1>
+            </div>
         </div>
-        <div class="temperature-description">So hot, youll want to slap your momma!</div>
+        
+        <div class='right-box'>
+            <div class="temperature">
+                <div class='degree-section'>
+                    <h2 class="temperature-degree">78</h2>
+                    <span>F</span>
+                    
+                </div>
+                <canvas class='icon' width="75" height="75"></canvas>
+                <div class="temperature-description">So hot, youll want to slap your momma!</div>
+            </div>
+            
+            <div class='sunTime'>
+                <div class='sunrise'>
+                    <p>Sunrise:</p>
+                    <div class='sunrise-time'>Sunrise</div>
+                </div>
+                
+                <div class='sunset'>
+                    <p>Sunset:</p>
+                    <div class='sunset-time'>Sunset</div>
+                </div>
+    
+            </div>
+            
+        </div>
+
     </div>
+
+
     <script src='skycons-master/skycons.js'></script>
-<script src='app.js'></script>
+    <script src='app.js'></script>
 </body>
 </html>

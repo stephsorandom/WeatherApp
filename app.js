@@ -8,6 +8,8 @@ window.addEventListener('load', () => {
     let locationTimezone = document.querySelector('.location-timezone');
     let temperatureSection = document.querySelector('.temperature');
     let temperatureSpan = document.querySelector('.temperature span');
+    let sunriseTime = document.querySelector('.sunrise-time');
+    let sunsetTime = document.querySelector('.sunset-time')
 
 
     if(navigator.geolocation){
@@ -23,11 +25,13 @@ window.addEventListener('load', () => {
             .then(data => {
                 console.log(data)
                 //now we grab the info from api we want, which is temperature and the conditions description
-                const {temp, conditions, icon} = data.currentConditions; 
+                const {temp, conditions, icon, sunrise, sunset} = data.currentConditions; 
                 //Set DOM elements from the API
                 temperatureDegree.textContent = temp
                 temperatureDescription.textContent = conditions;
                 locationTimezone.textContent = data.timezone;
+                sunriseTime.textContent = sunrise;
+                sunsetTime.textContent = sunset;
                 //Celcius Formula
                 let celsius = (temp - 32)*(5/9)
             
