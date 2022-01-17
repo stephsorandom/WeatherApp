@@ -9,7 +9,8 @@ window.addEventListener('load', () => {
     let temperatureSection = document.querySelector('.temperature');
     let temperatureSpan = document.querySelector('.temperature span');
     let sunriseTime = document.querySelector('.sunrise-time');
-    let sunsetTime = document.querySelector('.sunset-time')
+    let sunsetTime = document.querySelector('.sunset-time');
+
 
 
     if(navigator.geolocation){
@@ -26,6 +27,7 @@ window.addEventListener('load', () => {
                 console.log(data)
                 //now we grab the info from api we want, which is temperature and the conditions description
                 const {temp, conditions, icon, sunrise, sunset} = data.currentConditions; 
+
                 //Set DOM elements from the API
                 temperatureDegree.textContent = temp
                 temperatureDescription.textContent = conditions;
